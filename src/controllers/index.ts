@@ -1,13 +1,16 @@
-import * as express from 'express'
+import * as express from "express";
 
-const router = express.Router()
+const router = express.Router();
 
-router.get('/notes', (req, res, next) => {
-  res.send([{ title: 'first', text: 'test' }, { title: 'hehe', text: 'adin' }])
-})
+router.get("/notes", (_, res) => {
+  res.send([
+    { title: "first", text: "test" },
+    { title: "hehe", text: "adin" },
+  ]);
+});
 
-// router.get('/save-note', (req, res, next) => {
-//   res.send({message: 'ok'})
-// })
+router.get("/save-note", (_, res) => {
+  res.send({ message: "ok" });
+});
 
-export default router
+export default router;
