@@ -1,12 +1,12 @@
 import cors from "cors";
 import express from "express";
 
-import controllers from "./controllers/index.js";
+import { graphql } from "./graphql/index.js";
 
 const app = express();
 
 app.use(cors());
-app.use("/api", controllers);
+app.use("/graphql", graphql);
 
-const port = 3001;
+const port = 4000;
 app.listen(port, () => console.log(`Server is running on ${port}`));
